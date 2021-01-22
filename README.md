@@ -1,5 +1,9 @@
 # ImageIt Migration
 
+## Where?
+
+https://pierosavi.github.io/imageit-migration/
+
 ## Why?
 
 ImageIt was originally a fork of an unmantained plugin. Because of this I wanted to keep compatibility between the two as high as possible, sadly that plugin wasn't developed with best practices in mind.

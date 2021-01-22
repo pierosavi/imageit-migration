@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/static/js/main.ec6caa55.chunk.js",
-    "main.js.map": "/static/js/main.ec6caa55.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.5889ceeb.js",
-    "runtime-main.js.map": "/static/js/runtime-main.5889ceeb.js.map",
-    "static/js/2.69f93062.chunk.js": "/static/js/2.69f93062.chunk.js",
-    "static/js/2.69f93062.chunk.js.map": "/static/js/2.69f93062.chunk.js.map",
-    "index.html": "/index.html",
-    "static/js/2.69f93062.chunk.js.LICENSE.txt": "/static/js/2.69f93062.chunk.js.LICENSE.txt"
+    "main.js": "/imageit-migration/static/js/main.ec6caa55.chunk.js",
+    "main.js.map": "/imageit-migration/static/js/main.ec6caa55.chunk.js.map",
+    "runtime-main.js": "/imageit-migration/static/js/runtime-main.b86209cc.js",
+    "runtime-main.js.map": "/imageit-migration/static/js/runtime-main.b86209cc.js.map",
+    "static/js/2.275845a7.chunk.js": "/imageit-migration/static/js/2.275845a7.chunk.js",
+    "static/js/2.275845a7.chunk.js.map": "/imageit-migration/static/js/2.275845a7.chunk.js.map",
+    "index.html": "/imageit-migration/index.html",
+    "static/js/2.275845a7.chunk.js.LICENSE.txt": "/imageit-migration/static/js/2.275845a7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5889ceeb.js",
-    "static/js/2.69f93062.chunk.js",
+    "static/js/runtime-main.b86209cc.js",
+    "static/js/2.275845a7.chunk.js",
     "static/js/main.ec6caa55.chunk.js"
   ]
 }

@@ -1,4 +1,4 @@
-import { Box, Flex, Flash } from "@primer/components";
+import { Box, Flex, Flash, Heading, Text } from "@primer/components";
 import { useEffect, useState } from "react";
 import NewDataFormat from "./types/NewDataFormat";
 import OldDataFormat from './types/OldDataFormat';
@@ -87,6 +87,15 @@ function App() {
     }
   }
 
+  const onOutputTAClicked = (element: React.MouseEvent<HTMLTextAreaElement, MouseEvent>) => {
+    try {
+      element.currentTarget.select()
+      document.execCommand("copy")
+    } catch (error) {
+      console.error(error) 
+    }
+  }
+
   useEffect(() => {
     if (oldDataInput) {
       try {
@@ -97,24 +106,31 @@ function App() {
     }
   }, [oldDataInput]);
 
-  return (
-    <>
-    <Flex padding={4}>
-      <Box width={[1, 1/2, 1/2]} padding={2}>
-        <textarea placeholder='Input text area. Paste panel JSON here.' onChange={onInputTAChange} style={{width: '100%', height: '200px', resize: 'vertical'}}></textarea>
-      </Box>
+  const wrapperBoxHeight = error ? 'calc(100vh - 68px - 152px - 50px)' : 'calc(100vh - 68px - 152px)'
 
-      <Box width={[1, 1/2, 1/2]} padding={2}>
-        {/* <Button>Copy text to clipboard</Button> */}
-        <textarea placeholder='Output text area.' disabled value={outputTextAreaValue} style={{width: '100%', height: '200px', resize: 'vertical'}}></textarea>
-      </Box>
-    </Flex>
+  return (
     <Box padding={4}>
-      {error && <Flash variant="danger">
-        Error parsing JSON. Check that the format is ok.
-      </Flash>}
+      <Heading>How does it work?</Heading>
+      <Text>
+        Go to your v0.x.x ImageIt panel, click on the panel title &gt; Inspect &gt; Panel JSON.
+        <br />
+        Copy the content and paste it inside the input text area below.
+      </Text>
+      <Box paddingTop={4} paddingBottom={4} display={['block', 'block', 'block', 'block', 'flex']} height={wrapperBoxHeight}>
+        <Flex width={1} padding={2} height={['50%', '50%', '50%', '50%', '100%']}>
+          <textarea  placeholder='Input text area. Paste panel JSON here.' onChange={onInputTAChange} style={{width: '100%', height: '100%', resize: 'none'}}></textarea>
+        </Flex>
+
+        <Flex width={1} padding={2} height={['50%', '50%', '50%', '50%', '100%']}>
+          <textarea placeholder='Output text area. Not editable. Click to copy content to clipboard.' onClick={onOutputTAClicked} value={outputTextAreaValue} onChange={() => {}} style={{width: '100%', height: '100%', resize: 'none'}}></textarea>
+        </Flex>
+      </Box>
+      {error && <Box>
+        <Flash variant="danger">
+          Error parsing JSON. Check that the format is ok.
+        </Flash>
+      </Box>}
     </Box>
-    </>
   );
 }
 

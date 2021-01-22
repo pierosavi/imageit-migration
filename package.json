@@ -2,6 +2,7 @@
   "name": "imageit-migration",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://pierosavi.github.io/imageit-migration",
   "dependencies": {
     "@primer/components": "^23.0.1",
     "@testing-library/jest-dom": "^5.11.4",

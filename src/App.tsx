@@ -10,7 +10,7 @@ const migratePanelJSON = (oldPanelJSON: OldDataFormat): NewDataFormat => {
       imageUrl: oldPanelJSON.bgimage,
       forceImageRefresh: false,
       lockSensors: oldPanelJSON.islocked,
-      sensorsTextSize: 1,
+      sensorsTextSize: 10,
 
       sensors: [],
       mappings: [],

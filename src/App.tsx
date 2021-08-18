@@ -46,7 +46,7 @@ const migratePanelJSON = (oldPanelJSON: OldDataFormat): NewDataFormat => {
     visible: true,
     unit: sensor.unitFormat,
     valueBlink: false,
-    mappingId: sensor.valueMappingIds[0],
+    mappingIds: sensor.valueMappingIds,
   }))
 
   newPanelJSON.options.mappings = oldPanelJSON.valueMappings.map((mapping) => ({

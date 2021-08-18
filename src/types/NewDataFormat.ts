@@ -31,11 +31,11 @@ interface Sensor {
 	bold: boolean;
 	link: string;
 	position: Position;
-	mappingId: string;
+	mappingIds: string[];
 	decimals: number;
 	valueBlink: boolean;
 	backgroundBlink: boolean;
-	unit: string;
+	unit: string | undefined;
 }
 
 interface Values {
